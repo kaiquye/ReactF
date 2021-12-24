@@ -1,9 +1,16 @@
 import {useState} from 'react'
+import Button from './MensagemComponet/Button'
+
 import Components from './MensagemComponet/index'
 function Form (){
 
     const [name, setName] = useState('')
     const [password, setPassword] = useState('')
+
+    function eventClick(){
+        console.log('Button click.....')
+    }
+
     function form(e){
         //Pausa o submit do formulario e executa as outras linhas...
         e.preventDefault()
@@ -26,7 +33,7 @@ function Form (){
                     // function para passa o valor do input para o useState()
                     setName(e.target.value)
                 }}/> 
-                /> <br/>
+                 <br/>
                 <label>Passaword : </label>
                 <input type='text' placeholder="input" id="passaword" name="passaword" 
                 // dispara uma ação quando uma mudança ocorre em algum elemento (Event : e)
@@ -34,7 +41,7 @@ function Form (){
                     // function para passa o valor do input para o useState()
                     setPassword(e.target.value)
                 }}/> 
-                <button>Next</button>
+                <Button event={eventClick} text={'Click'} ></Button>
                 
             </form>
             <Components _name={name} password={password} />
