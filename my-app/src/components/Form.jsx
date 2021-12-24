@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import Button from './MensagemComponet/Button'
+import Botao from './MensagemComponet/Button'
 
 import Components from './MensagemComponet/index'
 function Form (){
@@ -23,8 +23,8 @@ function Form (){
         console.log(password)
     }
     return(
-        <>  
-            <h1>Formulario : </h1>
+        <div>  
+            <h1>Forms : </h1>
             <form onSubmit={form}>
                 <label>Nome : </label>
                 <input type='text' placeholder="input" id="nome" name="nome"
@@ -41,12 +41,12 @@ function Form (){
                     // function para passa o valor do input para o useState()
                     setPassword(e.target.value)
                 }}/> 
-                <Button event={eventClick} text={'Click'} ></Button>
-                
             </form>
+                <Botao click={eventClick} textM={'CLICK     '}/>
+                // Mensagem...
             <Components _name={name} password={password} />
-            
-        </>
+                
+        </div>
     )
 }
 

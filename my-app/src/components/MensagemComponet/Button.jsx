@@ -1,9 +1,10 @@
-function Button ({event, text}){
+import React from "react"
+function Botao ({click, textM}){
     return(
     <>
-        <Button onClick={event} >{text}</Button>
+        <button onClick={click}>{textM}</button>
     </>
     )
 }
 
-export default Button;
+export default Botao;
