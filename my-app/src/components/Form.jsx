@@ -15,7 +15,6 @@ function Form (){
         //Pausa o submit do formulario e executa as outras linhas...
         e.preventDefault()
 
-
         console.log('Ola, botão acionado !')
         console.log('nome : ')
         console.log(name)
